@@ -61,8 +61,22 @@ img {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+.menu-boton {
+    background-color: #4b2e2a;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.menu-boton:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
 .nav__lista {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -79,6 +93,10 @@ img {
     background-color: #c8873d;
     color: #2b1d1a;
     font-weight: 700;
+}
+
+.nav__lista.abierto { 
+    display: flex; 
 }
 
 /* ===== PASO 8: Hero (móvil) ===== */
@@ -173,7 +191,11 @@ img {
         flex-direction: row;
         justify-content: space-between;
     }
+    .menu-boton {
+        display: none;
+    }
     .nav__lista {
+        display: flex;
         flex-direction: row;
         gap: 0.25rem;
     }
